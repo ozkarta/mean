@@ -1,11 +1,11 @@
 module.exports = function (express) {
     let router = express.Router();
-    let UserModel = require('../../models/user.model').model;
+    let UserModel = require('../model/user.model').model;
     let jwt = require('jsonwebtoken');
     let bcrypt = require('bcryptjs');
-    let config = require('../../shared/config/config');
-    let MSG = require('../../shared/messages/messages');
-    let util = require('../../shared/util/util');
+    let config = require('../shared/config/config');
+    let MSG = require('../shared/messages/messages');
+    let util = require('../shared/util/util');
 
     router.get('/', (req, res) => {
         console.dir(req.query);
